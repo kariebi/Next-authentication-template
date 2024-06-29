@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground: #000;
+  --background-start: #D6DBDC;
+  --background-end: #fff;
+  --bg-gray: #F6F6F6;
+  --full-bg-gradient: linear-gradient(to top right,
+      transparent,
+      var(--background-end)) var(--background-start);
+  --line-bg-gradient: linear-gradient(to bottom right,
+      transparent,
+      var(--background-end)) var(--background-start);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground: #fff;
+    --bg-gray: #292828;
+    --background-start: #0e0d0d;
+    --background-end: #000;
+    --full-bg-gradient: linear-gradient(to top right,
+        transparent,
+        var(--background-end)) var(--background-start);
+    --line-bg-gradient: linear-gradient(to bottom right,
+        transparent,
+        var(--background-end)) var(--background-start);
+  };
+}
+
+body {
+  color: var(--foreground);
+  background: var(--full-bg-gradient);
+  @apply pt-16
+}
+
+
+.signuplink{
+  @apply text-blue-600
+}
